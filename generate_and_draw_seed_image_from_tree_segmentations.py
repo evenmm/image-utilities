@@ -9,7 +9,7 @@ with open(json_path, 'r') as f:
 width = data["size"]["width"]
 height = data["size"]["height"]
 
-img = Image.new('L', (width, height), 255)  # 255 = white
+img = Image.new('L', (width, height), 0)  # 0 = black
 draw = ImageDraw.Draw(img)
 
 for obj in data["objects"]:
@@ -32,7 +32,7 @@ for obj in data["objects"]:
             (center_x - r, center_y - r),
             (center_x + r, center_y + r)
         ],
-        fill=0
-    )  # 0 = black
+        fill=255
+    )  # 255 = white
 
 img.save("2018_SJER_3_258000_4106000_tree_seeds.png")
