@@ -7,7 +7,7 @@ from ome_types.model import OME, Image as OMEImage, Pixels, Channel
 
 # --- Check function call ---
 if len(sys.argv) != 2:
-    print("Usage: python3 channel_fixer.py <input_rgb.tiff>")
+    print("Usage: python3 channel_fixer.py <input_rgb_image.tiff>")
     sys.exit(1)
 
 input_path = Path(sys.argv[1])
